@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:AxPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiAppReadOnlyProperty"
+             x:Class="MauiAppReadOnlyProperty.MainPage"
+             x:DataType="local:MainViewModel"
+             Title="{Binding Title}"
+             Size="{Binding Size}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label Text="{x:Binding Size, Source={x:RelativeSource AncestorType={x:Type local:AxPage}}}"
+                   HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"     />
+
+            <Label Text="{x:Binding Size}"
+                   HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"     />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</local:AxPage>
