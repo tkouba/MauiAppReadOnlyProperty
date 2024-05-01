@@ -6,11 +6,20 @@
              x:DataType="local:MainViewModel"
              Title="{Binding Title}"
              Size="{Binding Size}">
-
-    <ScrollView>
+    <Grid ColumnDefinitions="Auto,*" RowDefinitions="*">
         <VerticalStackLayout
+            Grid.Column="0"
+            Padding="10"
+            IsVisible="{x:Binding IsLandscape, Source={x:RelativeSource AncestorType={x:Type local:AxPage}}}"
+            BackgroundColor="DarkGray">
+            <Label Text="Side menu"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Column="1"
             Padding="30,0"
             Spacing="25">
+
+            <Label Text="Content view"/>
 
             <Label Text="{x:Binding Size, Source={x:RelativeSource AncestorType={x:Type local:AxPage}}}"
                    HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"     />
@@ -19,6 +28,6 @@
                    HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"     />
 
         </VerticalStackLayout>
-    </ScrollView>
 
+    </Grid>
 </local:AxPage>
