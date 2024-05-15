@@ -19,7 +19,7 @@ namespace MauiAppReadOnlyProperty
         //    private set => SetValue(SizePropertyKey, value);
         //}
 
-        // Generated read-only property definition with proper binding mode
+        // Generated read-only property definition (with proper binding mode as default)
         [BindableReadOnlyProp]
         SizeF _size;
 
