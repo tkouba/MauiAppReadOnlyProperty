@@ -20,7 +20,7 @@ namespace MauiAppReadOnlyProperty
         //}
 
         // Generated read-only property definition with proper binding mode
-        [BindableReadOnlyProp(DefaultBindingMode = (int)BindingMode.OneWayToSource)]
+        [BindableReadOnlyProp]
         SizeF _size;
 
         [BindableReadOnlyProp]
