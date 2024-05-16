@@ -23,6 +23,9 @@ namespace MauiAppReadOnlyProperty
         [BindableReadOnlyProp]
         SizeF _size;
 
+        /// <summary>
+        /// Current page is landscape
+        /// </summary>
         [BindableReadOnlyProp]
         bool _isLandscape = false;
 
